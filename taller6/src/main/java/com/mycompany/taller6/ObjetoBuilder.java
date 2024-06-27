@@ -6,8 +6,23 @@ package com.mycompany.taller6;
 
 /**
  *
- * @author CltControl
+ * @author Justin Roldan
  */
-public class ObjetoBuilder implements Builder{
+public class ObjetoBuilder extends EntidadBuilder{
+
+    @Override
+    public boolean definirAcciones() {
+        return true;
+    }
+
+    @Override
+    public boolean agregarAnimaciones() {
+        return true;
+    }
+
+    @Override
+    public boolean configurarEstadisticas() {
+        return true;
+    }
     
 }

@@ -6,8 +6,11 @@ package com.mycompany.taller6;
 
 /**
  *
- * @author CltControl
+ * @author Justin Roldan
  */
-public interface Builder {
-
+public abstract class EntidadBuilder {
+    protected Entidad e;
+    public abstract boolean definirAcciones();
+    public abstract boolean agregarAnimaciones();
+    public abstract boolean configurarEstadisticas();
 }

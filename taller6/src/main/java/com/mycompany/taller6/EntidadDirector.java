@@ -8,19 +8,16 @@ package com.mycompany.taller6;
  *
  * @author Justin Roldan
  */
-public class JugadorBuilder extends EntidadBuilder{
-    @Override
-    public boolean definirAcciones() {
-        return true;
+public class EntidadDirector {
+    private EntidadBuilder builder;
+    public EntidadDirector(EntidadBuilder builder){
+        this.builder=builder;
     }
-
-    @Override
-    public boolean agregarAnimaciones() {
-        return true;
+    
+    public void crearEntidad(){
     }
-
-    @Override
-    public boolean configurarEstadisticas() {
-        return true;
+    
+    public Entidad getEntidad(){
+        return builder.e;
     }
 }
