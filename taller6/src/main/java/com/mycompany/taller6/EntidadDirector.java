@@ -9,15 +9,19 @@ package com.mycompany.taller6;
  * @author Justin Roldan
  */
 public class EntidadDirector {
-    private EntidadBuilder builder;
-    public EntidadDirector(EntidadBuilder builder){
-        this.builder=builder;
+   private EntidadBuilder builder;
+
+    public EntidadDirector(EntidadBuilder builder) {
+        this.builder = builder;
     }
-    
-    public void crearEntidad(){
+
+    public void crearEntidad() {
+        builder.definirAcciones();
+        builder.agregarAnimaciones();
+        builder.configurarEstadisticas();
     }
-    
-    public Entidad getEntidad(){
-        return builder.e;
+
+    public Entidad getEntidad() {
+        return builder.getEntidad();
     }
 }

@@ -4,6 +4,8 @@
  */
 package com.mycompany.taller6;
 
+import java.util.List;
+
 /**
  *
  * @author CltControl
@@ -11,20 +13,54 @@ package com.mycompany.taller6;
 public class Jugador extends Entidad{
     private int vida;
     private int fuerza;
-    
+
+    public Jugador(String nombre, List<String> acciones, int vida, int fuerza) {
+        this.nombre = nombre;
+        this.acciones = acciones;
+        this.vida = vida;
+        this.fuerza = fuerza;
+    }
+
+    @Override
+    public void dibujar() {
+        System.out.println("Dibujando jugador: " + nombre);
+    }
+
+    @Override
+    public void actualizar() {
+        System.out.println("Actualizando estado del jugador: " + nombre);
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
     public void setVida(int vida) {
         this.vida = vida;
+    }
+
+    public int getFuerza() {
+        return fuerza;
     }
 
     public void setFuerza(int fuerza) {
         this.fuerza = fuerza;
     }
 
-    @Override
-    public void dibujar() {
+    public String getNombre() {
+        return nombre;
     }
 
-    @Override
-    public void actualizar() {
-    }  
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public List<String> getAcciones() {
+        return acciones;
+    }
+
+    public void setAcciones(List<String> acciones) {
+        this.acciones = acciones;
+    }
+    
 }
